@@ -70,6 +70,8 @@ fix-executor-permissions:
     - require:
       - cmd: fix-executor-group
 
+{%- endif %}
+
 {{ hadoop.alt_config }}/yarn-site.xml:
   file.managed:
     - source: salt://hadoop/conf/yarn/yarn-site.xml
@@ -84,7 +86,6 @@ fix-executor-permissions:
     - user: root
     - template: jinja
 
-{%- endif %}
 
 {% if yarn.is_resourcemanager %}
 
