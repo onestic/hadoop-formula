@@ -1,6 +1,6 @@
 #!/bin/bash
 
-names=${1:-"hdfs mapred yarn"}
+names=${1:-"hdfs mapred yarn hbase"}
 
 for name in $names
 do
